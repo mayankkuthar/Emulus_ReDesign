@@ -114,8 +114,8 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-@media (max-width:575px){
-  .trip-header{
+@media (max-width:575px) {
+  .trip-header {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
@@ -395,9 +395,19 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-@media (max-width: 900px){
-  #hero::before {
+@media (max-width: 900px) {
+  .home-hero::before {
     background-image: url(../img/banner1.png) !important;
+  }
+
+  .contact-hero::before {
+    background-image: url(../img/contact-banner1.png) !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-hero::before {
+    background-image: url(../img/contact-banner.png) !important;
   }
 }
 
@@ -746,7 +756,7 @@ section {
 
 @media (max-width: 575px) {
   .about {
-    padding:25px;
+    padding: 25px;
   }
 
   .cta {
@@ -2008,6 +2018,10 @@ section {
     mix-blend-mode: initial;
   }
 
+  .content-2.elementor-mct.elementor-element-fcq:hover{
+    background-image: linear-gradient(190deg, #1E2A397A 0%, var(--e-global-color-astglobalcolor7) 100%) !important;
+  }
+
   .elementor-mct.elementor-element-fcq::before,
   .elementor-mct.elementor-element-x6e::before,
   .elementor-mct.elementor-element-h4n::before {
@@ -2016,6 +2030,15 @@ section {
     background-position: bottom left;
     background-repeat: no-repeat;
     mix-blend-mode: initial;
+  }
+
+  .content-2.elementor-mct.elementor-element-fcq::before{
+    content: '';
+    background-image: url(https://websitedemos.net/marketing-agency-02/wp-content/uploads/sites/725/2020/11/bg-05-free-img.png) !important;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    mix-blend-mode: initial;
+    z-index: -100 !important;
   }
 
   @media (max-width: 1025px) {
@@ -2028,6 +2051,10 @@ section {
     .elementor-mct.elementor-element-7wk {
       --width: 74.8%
     }
+
+    .content-1{
+      --width: 19.1% !important
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -2039,6 +2066,10 @@ section {
     .elementor-mct.elementor-element-x6e,
     .elementor-mct.elementor-element-h4n {
       --width: 33.3333%;
+    }
+
+    .content-2.elementor-mct.elementor-element-fcq{
+      --width: 100%;
     }
   }
 
@@ -2884,4 +2915,134 @@ h3,
     margin: 0 auto;
     margin-left: 0;
   }
+}
+
+.map-address {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: 150px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  opacity: 0;
+  z-index: -10;
+}
+
+.map-address .vis {
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-family: 'Poppins';
+  font-weight: lighter;
+  background-color: #0a0913;
+  width: 100%;
+  height: 37%;
+  border: 0.1px solid black;
+  border-radius: 3%;
+  box-shadow: 0px 0px 5px 0px;
+}
+
+.trans .mid {
+  border-right: 0.1px solid black;
+  width: 50%;
+  height: 100%;
+}
+
+.map-address .trans {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 59%;
+}
+
+.map-address .dot {
+  width: 3.5%;
+  height: 4%;
+  background-color: #ffffff;
+  border: 0.1px solid black;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.vis .phone {
+  display: flex;
+  justify-content: left;
+  height: 50%;
+  padding: 10px;
+  padding-bottom: 1px !important;
+  padding-top: 5px !important;
+}
+
+.vis .mail {
+  display: flex;
+  justify-content: left;
+  height: 50%;
+  padding: 10px;
+  padding-bottom: 1px !important;
+  padding-top: 5px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .resp-field {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  .resp-field {
+    display: block !important;
+  }
+}
+
+input[type="text"] {
+  height: 45px;
+  border-width: 1px;
+  border-radius: 0;
+  margin: .5rem 0;
+  outline: none;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.overide-form {
+  border: 1px solid rgba(200, 200, 200, .5);
+}
+
+select {
+  height: 45px;
+  border-width: 1px !important;
+  border-radius: 0 !important;
+  margin: .5rem 0;
+  outline: none;
+  word-wrap: normal;
+}
+
+textarea.form-control {
+  min-height: calc(1.5em +(.75rem + 2px));
+}
+
+textarea {
+  border-width: 1px !important;
+  border-radius: 0 !important;
+  margin: .5rem 0;
+  resize: none;
+  outline: none;
 }
